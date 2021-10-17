@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  form(method="POST" action="/new")
+    label(name="author") Your name
+    input(type="text" name="author" required)
+    label(name="message") Your message
+    input(type="text" name="message" required)
+    input(type="submit" name="submit")

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  div.welcome--container
+    p Welcome to #{title}
+    p These are your messages
+  each message in messages
+    div.message--container
+      p.user= "User: " + message.user
+      p.text= "Text: " + message.text
+      p.date= "Date: " + message.added
+  else 
+    li There are no messages
+  div.new--message
+    a(href="/new") Add a new message
